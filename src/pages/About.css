@@ -1,0 +1,80 @@
+.about-page { padding-top: 70px; }
+
+.page-hero {
+  height: 380px; background-size: cover; background-position: center;
+  position: relative; display: flex; align-items: center; justify-content: center;
+}
+.page-hero-overlay { position: absolute; inset: 0; background: rgba(10,30,15,0.65); }
+.page-hero-content { position: relative; z-index: 1; text-align: center; color: white; }
+.page-hero-content h1 { font-size: 3rem; margin: 12px 0 8px; }
+.page-hero-content p { color: rgba(255,255,255,0.75); font-size: 1rem; }
+
+.about-block {
+  display: flex; gap: 24px; align-items: flex-start;
+  background: white; border-radius: var(--radius); padding: 40px;
+  box-shadow: var(--shadow); margin-bottom: 40px;
+}
+.about-icon-wrap {
+  width: 56px; height: 56px; border-radius: 14px;
+  background: rgba(45,106,79,0.1); color: var(--green-forest);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.block-title { font-size: 1.8rem; color: var(--green-dark); margin-bottom: 16px; }
+.about-block p { color: var(--text-mid); line-height: 1.8; }
+
+.founders-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.founder-chip {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--beige); border-radius: 50px; padding: 6px 14px 6px 6px;
+}
+.founder-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--green-forest); color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700;
+}
+.founder-chip span { font-size: 0.88rem; font-weight: 500; color: var(--text-dark); }
+
+.mvg-grid { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 20px; margin-bottom: 40px; }
+.mvg-card { background: white; border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
+.mvg-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: rgba(45,106,79,0.1); color: var(--green-forest);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+}
+.mvg-card h3 { font-size: 1.2rem; color: var(--green-dark); margin-bottom: 12px; }
+.mvg-card p { color: var(--text-mid); line-height: 1.7; font-size: 0.95rem; }
+.vision-quote { font-style: italic; font-size: 1.1rem !important; color: var(--green-forest) !important; font-weight: 600; }
+.objectives-card ul { padding-left: 0; list-style: none; }
+.objectives-card ul li { padding: 8px 0; border-bottom: 1px solid var(--beige); font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; display: flex; gap: 8px; }
+.objectives-card ul li::before { content: '▸'; color: var(--green-forest); flex-shrink: 0; }
+.objectives-card ul li:last-child { border-bottom: none; }
+
+.creed-section {
+  background: var(--green-dark); border-radius: var(--radius);
+  padding: 48px; margin-bottom: 60px; color: white;
+}
+.creed-header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; color: var(--green-light); }
+.creed-header h2 { font-size: 1.8rem; color: white; }
+.creed-body { display: flex; flex-direction: column; gap: 20px; }
+.creed-body p { color: rgba(255,255,255,0.8); line-height: 1.9; font-size: 0.95rem; }
+.creed-closing { font-style: italic; font-weight: 700; color: var(--green-light) !important; font-size: 1.1rem !important; text-align: center; margin-top: 16px; }
+
+.about-gallery-section { margin-bottom: 40px; }
+.about-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.gallery-item { border-radius: var(--radius-sm); overflow: hidden; aspect-ratio: 4/3; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.gallery-item:hover img { transform: scale(1.05); }
+
+@media (max-width: 900px) {
+  .mvg-grid { grid-template-columns: 1fr 1fr; }
+  .objectives-card { grid-column: span 2; }
+  .about-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .about-block { flex-direction: column; }
+  .mvg-grid { grid-template-columns: 1fr; }
+  .objectives-card { grid-column: auto; }
+  .about-gallery { grid-template-columns: 1fr; }
+  .page-hero-content h1 { font-size: 2rem; }
+}
