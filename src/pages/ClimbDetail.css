@@ -40,6 +40,21 @@
 .detail-section { background: white; border-radius: var(--radius); padding: 32px; margin-bottom: 24px; box-shadow: var(--shadow); }
 .detail-section h2 { display: flex; align-items: center; gap: 10px; font-size: 1.3rem; color: var(--green-dark); margin-bottom: 20px; }
 .detail-section p { color: var(--text-mid); line-height: 1.8; }
+.section-note { font-size: 0.88rem; color: var(--text-light); margin-bottom: 16px; font-style: italic; }
+
+.lnt-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.lnt-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.92rem; color: var(--text-mid); line-height: 1.5;
+}
+.lnt-list li svg { color: var(--green-mid); flex-shrink: 0; margin-top: 3px; }
+
+.guest-fee-note {
+  font-size: 0.82rem; color: var(--text-light); line-height: 1.6;
+  margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--beige);
+}
+.officers-announcement { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
+.join-closed-msg { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; text-align: center; }
 
 .itinerary-timeline { display: flex; flex-direction: column; gap: 0; }
 .timeline-item { display: flex; gap: 20px; position: relative; padding-bottom: 28px; }

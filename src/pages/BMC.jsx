@@ -41,19 +41,19 @@ const REQUIREMENTS = [
 ];
 
 const INSTRUCTORS = [
-  { name: 'Dennis Sacro', role: 'Head Instructor', expertise: 'Technical Mountaineering, Navigation' },
-  { name: 'Ed Ocampo', role: 'Safety Officer', expertise: 'Wilderness First Aid, Emergency Response' },
-  { name: 'Long Henson', role: 'Field Instructor', expertise: 'Camp Management, Survival Skills' },
-  { name: 'Anne Sacro', role: 'Medic Officer', expertise: 'Wilderness Medicine, Physical Assessment' },
+  { name: 'TBA', role: 'TBA', expertise: 'TBA' },
+  { name: 'TBA', role: 'TBA', expertise: 'TBA' },
+  { name: 'TBA', role: 'TBA', expertise: 'TBA' },
+  { name: 'TBA', role: 'TBA', expertise: 'TBA' },
 ];
 
 const GALLERY = [
-  'https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&q=80',
-  'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&q=80',
-  'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=500&q=80',
-  'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&q=80',
-  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&q=80',
-  'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80',
+  'img1.jpg',
+  'img2.jpg',
+  'img6.jpg',
+  'img4.jpg',
+  'img3.jpg',
+  'img5.jpg',
 ];
 
 export default function BMC() {
@@ -86,9 +86,9 @@ export default function BMC() {
           <div className="bmc-desc">
             <h2 className="section-title">What is BMC?</h2>
             <p>The <strong>Basic Mountaineering Course (BMC)</strong> is MMS's flagship training program designed to introduce participants to the fundamentals of mountaineering. From navigation and knot-tying to wilderness first aid and Leave No Trace principles, BMC prepares you for safe and responsible outdoor adventures.</p>
-            <p style={{marginTop:'12px'}}>The course runs over 8 weeks with a mix of classroom sessions, practical training, and culminating with an actual climb. Upon completion, participants are eligible for full MMS membership.</p>
+            <p style={{marginTop:'12px'}}>The course runs over 1 year with a mix of minor/major hikes, practical training, and culminating with an actual climb. Upon completion, participants are eligible for full MMS membership.</p>
             <div className="bmc-highlights">
-              <div className="highlight-item"><CheckCircle size={16}/> 8-Week Program</div>
+              <div className="highlight-item"><CheckCircle size={16}/> 1 Year Program</div>
               <div className="highlight-item"><CheckCircle size={16}/> Certificate of Completion</div>
               <div className="highlight-item"><CheckCircle size={16}/> MMS Membership Eligibility</div>
               <div className="highlight-item"><CheckCircle size={16}/> Culminating Climb</div>
@@ -110,19 +110,19 @@ export default function BMC() {
           <div className="bmc-event-big card">
             <div className="event-big-left">
               <div className="event-tag"><Calendar size={14}/> Upcoming Event</div>
-              <h2>BMC 2026</h2>
-              <p>Registration is now open for the Metropolitan Mountaineering Society's Basic Mountaineering Course 2026. Join us for an exciting journey of learning, camaraderie, and adventure.</p>
+              <h2>BMC 2027</h2>
+              <p>Registration is NOT YET open for the Metropolitan Mountaineering Society's Basic Mountaineering Course 2026. Join us for an exciting journey of learning, camaraderie, and adventure.</p>
               <div className="event-meta-grid">
                 <div className="event-meta-item"><Calendar size={16}/><div><strong>Schedule</strong><span>Jan – Dec 2026</span></div></div>
-                <div className="event-meta-item"><MapPin size={16}/><div><strong>Venue</strong><span>See program table below</span></div></div>
+                <div className="event-meta-item"><MapPin size={16}/><div><strong>Venue</strong><span>See program 2026 below </span></div></div>
                 <div className="event-meta-item"><Users size={16}/><div><strong>Slots</strong><span>Limited to 30 participants</span></div></div>
-                <div className="event-meta-item"><Clock size={16}/><div><strong>Duration</strong><span>8 Weeks + Culminating Climb</span></div></div>
+                <div className="event-meta-item"><Clock size={16}/><div><strong>Duration</strong><span>1 Year Program </span></div></div>
               </div>
             </div>
             <div className="event-big-right">
               <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&q=80" alt="BMC" />
               <a href="https://www.facebook.com/share/g/1CkqCdAgRg/" target="_blank" rel="noopener noreferrer" className="btn btn-primary event-reg-btn">
-                Register for BMC 2026
+                Register for BMC 2027
               </a>
             </div>
           </div>

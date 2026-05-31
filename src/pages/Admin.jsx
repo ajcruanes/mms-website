@@ -12,7 +12,7 @@ const NAV = [
   { id: 'participants', label: 'Participants', icon: Users },
 ];
 
-const FIELD_DEFAULTS = { name:'', difficulty:'Moderate', elevation:'', location:'', schedule:'', limit:'', description:'', thumbnail:'' };
+const FIELD_DEFAULTS = { name:'', category:'Minor', elevation:'', location:'', schedule:'', limit:'', description:'', thumbnail:'' };
 
 export default function Admin() {
   const { user, logout, climbs, addClimb, updateClimb, deleteClimb, joinRequests, updateRequest } = useAuth();
@@ -294,9 +294,9 @@ export default function Admin() {
                   <input required value={form.name} onChange={e=>setForm({...form, name:e.target.value})} placeholder="e.g. Mt. Arayat"/>
                 </div>
                 <div className="form-group">
-                  <label>Difficulty *</label>
-                  <select value={form.difficulty} onChange={e=>setForm({...form, difficulty:e.target.value})}>
-                    <option>Easy</option><option>Moderate</option><option>Difficult</option><option>Very Difficult</option>
+                  <label>Category *</label>
+                  <select value={form.category} onChange={e=>setForm({...form, category:e.target.value})}>
+                    <option>Minor</option><option>Major</option><option>Special</option>
                   </select>
                 </div>
               </div>

@@ -99,12 +99,12 @@ export default function About() {
           <h2 style={{textAlign:'center', color:'var(--green-dark)', marginBottom:'32px'}}>Our Community</h2>
           <div className="about-gallery">
             {[
-              'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&q=80',
-              'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80',
-              'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80',
-              'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500&q=80',
-              'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=500&q=80',
-              'https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&q=80',
+              'IMG_2384.jpg',
+              'img1.jpg',
+              'img2.jpg',
+              'img3.jpg',
+              'img4.jpg',
+              'img5.jpg',
             ].map((src, i) => (
               <div key={i} className="gallery-item card">
                 <img src={src} alt={`MMS Gallery ${i+1}`} loading="lazy"/>

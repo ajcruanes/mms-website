@@ -40,6 +40,9 @@
   display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center;
 }
 .footer-bottom p { color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+.footer-instagram { margin-top: 6px; }
+.footer-instagram a { color: var(--green-light); font-weight: 600; }
+.footer-instagram a:hover { color: white; }
 .footer-dev { color: rgba(255,255,255,0.4) !important; }
 
 @media (max-width: 768px) {

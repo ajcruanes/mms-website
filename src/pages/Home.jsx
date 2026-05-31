@@ -2,21 +2,17 @@ import { useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { ChevronRight, MapPin, Mountain, ArrowRight, Star, Calendar } from 'lucide-react';
+import { getCategoryBadge, getStatusBadge } from '../utils/climbBadges';
 import './Home.css';
 
 const GALLERY = [
-  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&q=80',
-  'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80',
-  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80',
-  'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500&q=80',
-  'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=500&q=80',
-  'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&q=80',
+  'IMG_2384.jpg',
+  'img1.jpg',
+  'img2.jpg',
+  'img3.jpg',
+  'img4.jpg',
+  'img5.jpg',
 ];
-
-function getDifficultyBadge(d) {
-  const map = { 'Easy': 'badge-easy', 'Moderate': 'badge-moderate', 'Difficult': 'badge-difficult', 'Very Difficult': 'badge-very-difficult' };
-  return map[d] || 'badge-moderate';
-}
 
 export default function Home() {
   const { climbs } = useAuth();
@@ -41,7 +37,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg">
-          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80" alt="Mountain" />
+          <img src='IMG_2384.jpg' alt="Mountain" />
           <div className="hero-overlay" />
         </div>
         <div className="hero-mountain-silhouette">
@@ -121,12 +117,12 @@ export default function Home() {
                 <div className="bmc-event-header">
                   <Calendar size={18} /> <span>Upcoming BMC</span>
                 </div>
-                <h3>BMC 2026</h3>
+                <h3>BMC 2027 </h3>
                 <div className="bmc-event-details">
                   <div><MapPin size={14}/> Various Training Sites</div>
                   <div><Calendar size={14}/> Jan – Dec 2026</div>
                 </div>
-                <p style={{fontSize:'0.88rem', color:'var(--text-light)', margin:'12px 0'}}>Open for registration. Limited slots available.</p>
+                <p style={{fontSize:'0.88rem', color:'var(--text-light)', margin:'12px 0'}}> NOT Open for registration.</p>
                 <Link to="/bmc" className="btn btn-primary" style={{width:'100%', justifyContent:'center'}}>View Details</Link>
               </div>
             </div>
@@ -160,12 +156,15 @@ export default function Home() {
             <p className="section-subtitle">Join our upcoming mountaineering expeditions across the Philippines</p>
           </div>
           <div className="climbs-grid reveal" ref={addReveal}>
-            {climbs.slice(0, 4).map((climb, i) => (
+            {[...climbs]
+              .sort((a, b) => (a.sortDate || '').localeCompare(b.sortDate || ''))
+              .slice(0, 4)
+              .map((climb, i) => (
               <Link to={`/climb/${climb.id}`} key={climb.id} className="climb-card card" style={{animationDelay:`${i*0.1}s`}}>
                 <div className="climb-img">
                   <img src={climb.thumbnail} alt={climb.name} loading="lazy" />
                   <div className="climb-overlay">
-                    <span className={`badge ${getDifficultyBadge(climb.difficulty)}`}>{climb.difficulty}</span>
+                    <span className={`badge ${getCategoryBadge(climb.category)}`}>{climb.category}</span>
                   </div>
                 </div>
                 <div className="climb-info">
@@ -175,7 +174,7 @@ export default function Home() {
                     <span><Mountain size={13}/> {climb.elevation}</span>
                   </div>
                   <div className="climb-footer">
-                    <span className="badge badge-open">{climb.status}</span>
+                    <span className={`badge ${getStatusBadge(climb.status)}`}>{climb.status}</span>
                     <span className="climb-link">View Details <ChevronRight size={14}/></span>
                   </div>
                 </div>
