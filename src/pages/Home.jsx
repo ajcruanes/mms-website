@@ -104,7 +104,7 @@ export default function Home() {
               <div className="bmc-video-card card">
                 <div className="bmc-video-embed">
                   <iframe
-                    src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                    src="https://www.youtube.com/embed/rc-jGWKuCk4?si=7xheq71gbWR1OQH3"
                     title="BMC Highlights (Sample)"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

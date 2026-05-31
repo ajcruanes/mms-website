@@ -3,7 +3,7 @@ import { Calendar, MapPin, Users, Clock, CheckCircle, ChevronDown, ChevronUp, Pl
 import './BMC.css';
 
 // Replace this sample with your final BMC YouTube video link when ready.
-const BMC_VIDEO_EMBED = 'https://www.youtube.com/embed/aqz-KE-bpKQ';
+const BMC_VIDEO_EMBED ="https://www.youtube.com/embed/rc-jGWKuCk4?si=7xheq71gbWR1OQH3"
 
 // Updated from your attached BMC program table (Target dates + locations).
 const SCHEDULE = [
